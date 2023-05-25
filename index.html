@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisas Importadas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cima header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(#ccc, #fff);
+            border-bottom: 2px solid #000;
+        }
+
+        .cima header li{
+            list-style: none;
+            font-size: 14px;
+            padding:0 10px;
+        }
+        .cima header ul{
+            display: flex;
+        }
+
+        .cima header li a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .sobre{
+            justify-content: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 90%;
+            width: 90%;
+        }
+
+        .sobre img {
+            width: 100%;
+
+        }
+
+        .produto {
+            justify-content: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 90%;
+            width: 90%;
+        }
+
+        .produto img{
+            width: 100%;
+        }
+        .produto ul{
+            display: block;
+            list-style: none;
+        }
+
+        .produto ul li{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .produto button{
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: linear-gradient(#ccc, #fff);
+            border: none;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(#fff,#ccc);
+        }
+
+        footer {
+            background: linear-gradient(#ccc, #fff);
+            border-top: 2px solid #000;
+        }
+        
+        @media screen and (min-width:768px) and (max-width:1023px){
+            .sobre h2, .produto h2{
+                font-size: 40px;
+            }
+
+            .produto ul {
+                display: grid;
+                grid-template-columns: repeat(2, 45%);
+            }
+
+            .produto li {
+                margin: 5%;
+                font-size: 30px;
+            }
+
+            button {
+                height: 30px;
+                font-size: 20px;
+            }
+
+            .sobre p {
+                font-size: 32px;
+            }
+
+            .cima header h1{
+            margin-left: 5%;
+            }
+        }
+
+        @media screen and (min-width:1024px){
+            .sobre div {
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .cima header h1{
+            margin-left: 5%;
+            }
+
+            .sobre div img {
+                width: 40%;
+            }
+
+            .sobre div p {
+                width: 40%;
+                margin-left: 3%;
+            }
+
+            .produto ul {
+                display: grid;
+                grid-template-columns: repeat(4, 25%)
+            }
+            .produto li {
+                margin: 4.5%;
+            }
+
+            .cima header ul li:hover {
+                text-decoration:overline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cima">
+        <header>
+            <h1>EBAC Imports</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#sobre">Sobre a Loja</a>
+                    </li>
+                    <li>
+                        <a href="#produto">Produtos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>       
+    </div>
+    <section class="sobre">
+        <h2 id="sobre">Sobre a Loja</h2>
+        <div>   
+            <img src="./images/loja.jpg" />
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus suscipit eius error atque esse laborum. Rerum, animi ducimus error incidunt assumenda nobis modi alias. Sit vitae dolorum ipsum nesciunt similique.
+            </p>
+        </div>
+    </section>
+    <section class="produto">
+        <h2 id="produto">Produtos</h2>
+        <ul>
+            <li>
+                <img src="/images/bahia.jpg"/>
+                <p>Camiseta Bahia</p>
+                <strong>R$ 100,00</strong>
+                <button type="button">Adicionar ao Carrinho</button>
+            </li>
+            <li>
+                <img src="/images/bayern.jpeg"/>
+                <p>Camiseta Bayern</p>
+                <strong>R$ 70,00</strong>
+                <button type="button">Adicionar ao Carrinho</button>
+            </li>
+            <li>
+                <img src="/images/brasil-branca.jpeg"/>
+                <p>Camiseta Brasil - Branca</p>
+                <strong>R$ 90,00</strong>
+                <button type="button">Adicionar ao Carrinho</button>
+            </li>
+            <li>
+                <img src="/images/brasil.jpg"/>
+                <p>Camiseta Brasil - Azul</p>
+                <strong>R$ 80,00</strong>
+                <button type="button">Adicionar ao Carrinho</button>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        &copy EBAC Imports
+    </footer>
+</body>
+</html>
